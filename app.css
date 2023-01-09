@@ -1,0 +1,130 @@
+*, *::before, *::after { 
+box-sizing: border-box;
+}
+
+body {
+    background: #f1f1f1;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    line-height: 1.3;
+
+}
+
+a {
+    color: inherit;
+}
+
+.topbar {
+    background: #2c3e50;
+    color: #fff;   
+}
+
+.topbar a {
+    text-decoration: none;
+}
+.topbar-logo {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding: 11px 0;
+}
+
+.topbar-nav {
+    text-align: center;
+    padding-bottom: 16px;
+    line-height: 2;
+}
+
+.topbar-nav a {
+    display: inline-block;
+    margin: 0 12px;
+    color: rgba(255, 255, 255, 0.67);
+    transition: color .3s;
+
+}
+
+.topbar-nav a:hover,
+.topbar-nav a:active {
+    color: #fff;    
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar a { 
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    padding:  0.6em 0;
+    transition: color 0.3s;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(img/home.svg) center center / contain no-repeat ;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 20px;
+    opacity: 0.67;
+    transition: opacity 0.3s;    
+}
+
+.sidebar .sidebar-messages::before {
+    background-image: url(img/msg.svg);
+}
+
+.sidebar .sidebar-events::before {
+    background-image: url(img/events.svg);
+}
+
+.sidebar .sidebar-groupes::before {
+    background-image: url(img/groupes.svg);
+}
+
+.sidebar .sidebar-amis::before {
+    background-image: url(img/amis.svg);
+}
+
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+ color: #000;
+}
+
+.sidebar a:hover::before,
+.sidebar a.active::before {
+    opacity: 1;
+
+}
+
+@media only screen and (min-width: 520px) {
+    .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 25px;
+}
+.topbar-logo,
+.topbar-nav {
+    padding: 0;
+}
+.topbar-nav a {
+    margin: 0 20px;
+}}
